@@ -1,0 +1,111 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+        },
+        {
+            "name": "XML RPC Device 01",
+            "type": "python",
+            "request": "launch",
+            "program": "src/device/xmlrpc_device.py",
+            "args":[
+                "-c", "test/device/xmlrpc_01/config.yaml",
+                "-l", "DEBUG"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "XML RPC Adapter 01",
+            "type": "python",
+            "request": "launch",
+            "program": "src/ehs/xmlrpc.py",
+            "args":[
+                "-c", "test/adapter/xmlrpc_01/config.yaml",
+                "-l", "DEBUG"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Extended Historian Service (EHS)",
+            "type": "python",
+            "request": "launch",
+            "program": "src/ehs/ehsx.py",
+            "args":[
+                "-c", "test/ehs/configuration_01/config.yaml",
+                "-l", "DEBUG"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Test Application (plotting)",
+            "type": "python",
+            "request": "launch",
+            "program": "test/application/app_01/application.py",
+            "args":[
+                "-c", "test/application/app_01/config.yaml",
+                "-l", "DEBUG"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "application 2",
+            "type": "python",
+            "request": "launch",
+            "program": "test/application/application2.py",
+            "args":[
+                "-c", "test/application/config.yaml",
+                "-l", "DEBUG"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "application 3",
+            "type": "python",
+            "request": "launch",
+            "program": "test/application/application3.py",
+            "args":[
+                "-c", "test/application/config.yaml",
+                "-l", "DEBUG"
+            ],
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "Arrowhead Device (Provider)",
+            "type": "python",
+            "request": "launch",
+            "program": "src/device/arrowhead_device.py",
+            "args":[
+                "-c", "test/device/arrowhead_01/config.yaml",
+                "-l", "DEBUG"
+            ],
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "Arrowhead Adapter (Consumer)",
+            "type": "python",
+            "request": "launch",
+            "program": "src/ehs/arrowhead.py",
+            "args":[
+                "-c", "test/adapter/arrowhead_01/config.yaml",
+                "-l", "DEBUG"
+            ],
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "Integration Test",
+            "type": "python",
+            "request": "launch",
+            "program": "test/integration_test.py",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+        }
+    ]
+}

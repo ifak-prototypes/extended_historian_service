@@ -1,0 +1,19 @@
+header:
+  title: ArrowheadAdapter
+  description: An Arrowhead adapter.
+server:
+  address: "[::]"
+  port: "8088"
+  ca_cert: ../../ca/cert/grpc/ca.pem
+  server_cert: cert/grpc/server.pem
+  server_key: cert/grpc/server-key.pem
+client:
+  name: ArrowheadDevice
+  description: This is an Arrowhead device.
+  system_name: "quickstart-consumer"
+  address: "127.0.0.1"
+  port: "7656"
+  keyfile: "test/arrowhead/core_services_01/certificates/crypto/quickstart-consumer.key"
+  certfile: "test/arrowhead/core_services_01/certificates/crypto/quickstart-consumer.crt"
+  cafile: "test/arrowhead/core_services_01/certificates/crypto/sysop.ca"
+

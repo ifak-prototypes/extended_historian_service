@@ -1,0 +1,6 @@
+header:
+  title: XML RPC Device
+  description: This is an example RPC device.
+server:
+  address: "127.0.0.1"
+  port: "8080"

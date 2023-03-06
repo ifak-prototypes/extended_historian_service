@@ -1,0 +1,9 @@
+header:
+  title: Application
+  description: A data analytics application using the EHS.
+client:
+  address: "127.0.0.1"
+  port: "50051"
+  ca_cert: ../../ca/cert/grpc/ca.pem
+  client_cert: ../cert/grpc/client.pem
+  client_key: ../cert/grpc/client-key.pem

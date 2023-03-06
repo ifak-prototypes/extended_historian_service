@@ -1,0 +1,10 @@
+header:
+  description: Arrowhead test device
+  title: Arrowhead Device
+server:
+  system_name: 'quickstart-provider'
+  address: '127.0.0.1'
+  port: '7655'
+  ca_cert: test/arrowhead/core_services_01/certificates/crypto/sysop.ca
+  server_cert: test/arrowhead/core_services_01/certificates/crypto/quickstart-provider.crt
+  server_key: test/arrowhead/core_services_01/certificates/crypto/quickstart-provider.key

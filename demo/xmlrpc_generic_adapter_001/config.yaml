@@ -1,0 +1,14 @@
+header:
+  title: XmlRpcAdapter
+  description: An XML RPC adapter.
+server:
+  address: "[::]"
+  port: "50052"
+  ca_cert: ../ca/cert/grpc/ca.pem
+  server_cert: cert/grpc/server.pem
+  server_key: cert/grpc/server-key.pem
+client:
+  name: XmlRpcDevice
+  description: This is a device.
+  address: "127.0.0.1"
+  port: "8080"

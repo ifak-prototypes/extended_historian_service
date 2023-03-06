@@ -1,0 +1,20 @@
+# setuptools creates folders during package creation
+build
+dist
+*.egg-info
+data
+logfile.txt
+
+# Python virtual environment
+venv
+
+# Python files
+__pycache__
+.mypy_cache
+
+# Emacs recovery files
+*~
+\#*\#
+
+# PyCharm files
+.idea

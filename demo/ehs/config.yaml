@@ -1,0 +1,53 @@
+adapters:
+- client:
+    address: 127.0.0.1
+    description: This is an XML-RPC adapter.
+    name: XmlRpcAdapter
+    port: '50052'
+    variables:
+    - name: CurrentTimeSec
+      type: int64
+    - name: WorkLoadHNA13ZX23
+      type: double
+    - name: RpcBool
+      type: bool
+    - name: RpcStr
+      type: string
+- client:
+    address: 127.0.0.1
+    description: This is an Arrowhead Framework adapter.
+    name: ArrowheadAdapter
+    port: '8088'
+    variables:
+    - name: CurrentTime
+      type: int64
+    - name: ConstantFloat
+      type: double
+    - name: AHMyBool
+      type: bool
+    - name: AHMyStr
+      type: string
+header:
+  description: Extended Historian Service
+  title: EHS
+jobs:
+  FiveSeconds:
+    channels:
+    - adapter: XmlRpcAdapter
+      variable: CurrentTimeSec
+    seconds: 5
+    type: interval
+  ThreeSeconds:
+    channels:
+    - adapter: XmlRpcAdapter
+      variable: CurrentTimeSec
+    - adapter: XmlRpcAdapter
+      variable: WorkLoadHNA13ZX23
+    seconds: 3
+    type: interval
+server:
+  address: '[::]'
+  ca_cert: ../ca/cert/grpc/ca.pem
+  port: '50051'
+  server_cert: cert/grpc/server.pem
+  server_key: cert/grpc/server-key.pem

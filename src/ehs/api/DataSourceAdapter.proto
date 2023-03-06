@@ -1,0 +1,34 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package eu.ifak.ehs;
+import "Commons.proto";
+
+
+service DataSourceAdapter {
+    rpc ping (PingRequest) returns (PingResponse) {}
+    rpc read (ReadRequest) returns (ReadResponse) {}
+    rpc write (WriteRequest) returns (WriteResponse) {}
+    rpc get_configuration(GetConfigurationRequest) returns (GetConfigurationResponse) {}
+
+    // rpc stream_read (stream ReadRequest) returns (stream ReadResponse) {}
+    // rpc stream_write (stream WriteRequest) returns (stream WriteResponse) {}
+}
+
+
+message ReadRequest {
+    string address = 1;
+}
+message ReadResponse {
+    Value value = 1;
+    Status status = 2;
+}
+
+
+message WriteRequest {
+    string address = 1;
+    Value value = 2;
+}
+message WriteResponse {
+    Status status = 2;
+}
+
